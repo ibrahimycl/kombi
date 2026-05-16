@@ -1,0 +1,224 @@
+{
+  "categories": [
+    {
+      "id": "kombi",
+      "name": "Kombi Parçaları",
+      "icon": "Flame",
+      "description": "Kombi yedek parça ve aksesuarları"
+    },
+    {
+      "id": "klima",
+      "name": "Klima Parçaları",
+      "icon": "Wind",
+      "description": "Klima yedek parça ve aksesuarları"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Kombi Eşanjör",
+      "description": "Yüksek verimli bakır eşanjör. Tüm kombi markalarına uyumlu, uzun ömürlü ve dayanıklı yapı.",
+      "price": 2450,
+      "category": "kombi",
+      "brand": "Vaillant",
+      "stock": 15,
+      "image": "",
+      "featured": true
+    },
+    {
+      "id": "2",
+      "name": "Kombi Fan Motoru",
+      "description": "Orijinal fan motoru, sessiz çalışma ve yüksek verimlilik. Kolay montaj.",
+      "price": 1850,
+      "category": "kombi",
+      "brand": "Baymak",
+      "stock": 8,
+      "image": "",
+      "featured": true
+    },
+    {
+      "id": "3",
+      "name": "Kombi Ateşleme Kartı",
+      "description": "Elektronik ateşleme kartı, orijinal yedek parça. Arızalı kart değişimi için idealdir.",
+      "price": 980,
+      "category": "kombi",
+      "brand": "Vaillant",
+      "stock": 22,
+      "image": "",
+      "featured": true
+    },
+    {
+      "id": "5",
+      "name": "Klima Kompresör",
+      "description": "Inverter klima kompresörü, enerji tasarruflu ve sessiz çalışma teknolojisi.",
+      "price": 4200,
+      "category": "klima",
+      "brand": "Samsung",
+      "stock": 5,
+      "image": "",
+      "featured": true
+    },
+    {
+      "id": "6",
+      "name": "Klima Dış Ünite Fan Motoru",
+      "description": "Klima dış ünite fan motoru, dayanıklı yapısıyla uzun ömürlü kullanım sağlar.",
+      "price": 1200,
+      "category": "klima",
+      "brand": "Daikin",
+      "stock": 12,
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": "8",
+      "name": "Sirkülasyon Pompası",
+      "description": "Yüksek verimli sirkülasyon pompası, enerji tasarruflu ve sessiz motor teknolojisi.",
+      "price": 1650,
+      "category": "kombi",
+      "brand": "Grundfos",
+      "stock": 18,
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": "9",
+      "name": "Genleşme Tankı 8L",
+      "description": "8 litre kapasiteli kombi genleşme tankı. Basınç dengeleme için idealdir.",
+      "price": 380,
+      "category": "kombi",
+      "brand": "Zilmet",
+      "stock": 25,
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": "10",
+      "name": "Baca Şapkası Aluminyum",
+      "description": "Aluminyum baca şapkası, hava koşullarına dayanıklı, kolay montaj.",
+      "price": 220,
+      "category": "kombi",
+      "brand": "Genel",
+      "stock": 50,
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": "11",
+      "name": "Kombi Su Filtresi",
+      "description": "Kombi giriş su filtresi, kireç ve tortu önleyici. Kombinin ömrünü uzatır.",
+      "price": 180,
+      "category": "kombi",
+      "brand": "Atlas",
+      "stock": 60,
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": "12",
+      "name": "Klima Gaz Dolum Seti R410A",
+      "description": "R410A klima gazı dolum seti, manometre dahil. Profesyonel kullanım için.",
+      "price": 890,
+      "category": "klima",
+      "brand": "Refco",
+      "stock": 10,
+      "image": "",
+      "featured": true
+    },
+    {
+      "id": "13",
+      "name": "NTC Sensör",
+      "description": "Kombi NTC sıcaklık sensörü, hassas ölçüm ve hızlı tepki süresi.",
+      "price": 120,
+      "category": "kombi",
+      "brand": "Vaillant",
+      "stock": 70,
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": "14",
+      "name": "Emniyet Ventili 3 Bar",
+      "description": "3 bar emniyet ventili, güvenli basınç tahliyesi için kombi ve kazan sistemlerinde kullanılır.",
+      "price": 95,
+      "category": "kombi",
+      "brand": "Caleffi",
+      "stock": 40,
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": "15",
+      "name": "Klima Kumanda (Üniversal)",
+      "description": "1000+ modele uyumlu üniversal klima kumandası. Otomatik marka algılama özelliği.",
+      "price": 150,
+      "category": "klima",
+      "brand": "Genel",
+      "stock": 100,
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": "16",
+      "name": "Kombi Membran",
+      "description": "Orijinal kombi su basınç membranı. Su basıncı düşüklüğü sorunlarında değiştirilmelidir.",
+      "price": 85,
+      "category": "kombi",
+      "brand": "Baymak",
+      "stock": 35,
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": "d75afb0c-1cb8-4cc1-9ef3-95600d5095bb",
+      "name": "Genleşme 3/8 Tanki 8 Lit Vaillant Eca Proteus Citius Confeo Premix WINKELMANN 2608800",
+      "description": "Ürün Adı: Winkelmann Kombi Genleşme Tankı – 8 Litre Model / Kod: CRF 8 | 2133300 / 2608800 | Bağlantı: 3/8” Basınç Değerleri: Ön şarj 0.75 ± 0.2 bar | Maksimum çalışma basıncı 3 bar | Test basıncı 4.5 bar Uyumlu Modeller: Vaillant, E.C.A. Proteus, Citius ve Confeo Premix kombilerle uyumludur. Kullanım Alanı: Kombi sistemlerinde basınç artışlarını dengeleyerek emniyet ventili açması ve su eksiltme sorunlarını önlemeye yardımcı olur. Ürün Bilgisi: Dayanıklı yapıya sahip, uzun ömürlü ve güvenilir kullanım",
+      "price": 2300,
+      "category": "kombi",
+      "brand": "Vaillant ",
+      "stock": 100,
+      "image": "https://i.ibb.co/9HbSz6h5/genlesme-3-8-tanki-8-lit-vaillant-eca-proteus-citius-confeo-pre-resim2-89-png-300x300.jpg",
+      "featured": true
+    },
+    {
+      "id": "df055e99-ecbe-4fa0-8f75-c39824e26832",
+      "name": "Gte Su Akış Şalteri Demirdöküm Şofben Compact",
+      "description": "Ürün Adı: GTE FLCZ20B00 Su Akış Şalteri – Demirdöküm Compact Şofben Uyumlu Model / Kod: FLCZ20B00 | Marka: GTE Elettromeccanica | Batch: 11/25 Uyumluluk: Demirdöküm Compact şofben modelleriyle uyumludur. Kullanım Alanı: Şofbenlerde su akışını algılayarak cihazın güvenli ve doğru çalışmasına yardımcı olur. Ürün Bilgisi: Kaliteli, güvenilir ve kullanılmamış yedek parça olup uygun fiyat avantajı sunar.",
+      "price": 486,
+      "category": "kombi",
+      "brand": "Demirdöküm ",
+      "stock": 100,
+      "image": "https://i.ibb.co/nN4RhyYT/gte-su-akis-salteri-demirdokum-sofben-compact-59-1.webp",
+      "featured": true
+    }
+  ],
+  "services": [],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "name": "Yönetici",
+      "role": "admin"
+    }
+  ],
+  "orders": [
+    {
+      "id": "93e21641-f142-4c19-af8f-5b19109fa642",
+      "items": [
+        {
+          "id": "02696369-f37a-4f92-bb79-f8d40f709ce8",
+          "name": "Deneme",
+          "brand": "Vaiilant",
+          "price": 1000,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 1000,
+      "shipping": 0,
+      "total": 1000,
+      "customer": null,
+      "status": "completed",
+      "createdAt": "2026-05-16T09:52:17.815Z"
+    }
+  ]
+}
