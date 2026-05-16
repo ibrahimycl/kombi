@@ -1,0 +1,51 @@
+# Production docker-compose for the kombi project.
+#
+# Designed to run alongside another stack (etkinio) on the same VPS.
+# The shared `web-net` external network is created once on the host
+# with:
+#   sudo docker network create web-net
+#
+# The outer nginx of the etkinio stack joins `web-net` too and
+# reverse-proxies kombi.etkinio.com → http://kombi-app:5000 over
+# that shared network. No host ports are published from this stack.
+#
+# Usage on the VPS:
+#   git clone https://github.com/ibrahimycl/kombi.git
+#   cd kombi
+#   sudo docker compose up -d --build
+#
+# Re-deploy after a `git pull`:
+#   sudo docker compose up -d --build
+
+name: kombi
+
+services:
+  kombi-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kombi-app
+    restart: unless-stopped
+    # Persist the JSON "database" across container rebuilds. The
+    # image ships with a seed server/data/db.json — on the very
+    # first start, Docker copies it into the named volume so the
+    # app is not empty. Subsequent rebuilds keep the volume.
+    volumes:
+      - kombi-data:/app/server/data
+    # No `ports:` — only the etkinio nginx talks to us, and it
+    # does so over the private web-net network. Closes off port
+    # 5000 from the public internet automatically.
+    expose:
+      - "5000"
+    networks:
+      - web-net
+
+networks:
+  # Shared with the etkinio stack so its outer nginx can reach
+  # `kombi-app` by hostname. Marked external so compose neither
+  # creates nor destroys it.
+  web-net:
+    external: true
+
+volumes:
+  kombi-data:

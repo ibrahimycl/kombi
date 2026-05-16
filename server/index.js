@@ -5,7 +5,7 @@ const path = require('path')
 const { v4: uuidv4 } = require('uuid')
 
 const app = express()
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 const DB_PATH = path.join(__dirname, 'data', 'db.json')
 
 app.use(cors())
@@ -303,6 +303,16 @@ app.delete('/api/orders/:id', (req, res) => {
 })
 
 // ==================== START ====================
+const DIST_DIR = path.join(__dirname, '..', 'dist')
+
+if (fs.existsSync(DIST_DIR)) {
+  app.use(express.static(DIST_DIR))
+
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api/')) return next()
+    res.sendFile(path.join(DIST_DIR, 'index.html'))
+  })
+}
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`)
