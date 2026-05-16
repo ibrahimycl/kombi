@@ -31,10 +31,6 @@ function enrichProduct(product, categories) {
 
 const crypto = require('crypto')
 
-function hashPassword(password) {
-  return crypto.createHash('sha256').update(password).digest('hex')
-}
-
 function generateToken() {
   return crypto.randomBytes(32).toString('hex')
 }
@@ -49,7 +45,7 @@ app.post('/api/auth/login', (req, res) => {
   const db = readDB()
   const user = db.users.find(u => u.username === username)
 
-  if (!user || user.password !== hashPassword(password)) {
+  if (!user || user.password !== password) {
     return res.status(401).json({ error: 'Kullanıcı adı veya şifre hatalı' })
   }
 
