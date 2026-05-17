@@ -8,6 +8,8 @@ import Cart from './pages/Cart'
 import Admin from './pages/Admin'
 import ServiceRequest from './pages/ServiceRequest'
 import Login from './pages/Login'
+import About from './pages/About'
+import Contact from './pages/Contact'
 import { useAuth } from './context/AuthContext'
 
 function ProtectedRoute({ children }) {
@@ -41,6 +43,8 @@ function App() {
           <Route path="/giris" element={<Login />} />
           <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
           <Route path="/servis" element={<ServiceRequest />} />
+          <Route path="/hakkimizda" element={<About />} />
+          <Route path="/iletisim" element={<Contact />} />
         </Routes>
       </main>
       <Footer />

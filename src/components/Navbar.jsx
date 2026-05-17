@@ -11,7 +11,9 @@ function Navbar() {
   const links = [
     { to: '/', label: 'Ana Sayfa' },
     { to: '/urunler', label: 'Ürünler' },
+    { to: '/hakkimizda', label: 'Hakkımızda' },
     { to: '/servis', label: 'Servis Talebi' },
+    { to: '/iletisim', label: 'İletişim' },
   ]
 
   const isActive = (path) => location.pathname === path
@@ -21,18 +23,22 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center shadow-lg shadow-primary-500/20 group-hover:shadow-primary-500/40 transition-shadow">
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center shadow-lg shadow-primary-500/20 group-hover:shadow-primary-500/40 transition-shadow flex-shrink-0">
               <Flame className="w-5 h-5 text-white" />
             </div>
-            <div>
-              <span className="text-xl font-bold text-gray-900">Parça</span>
-              <span className="text-xl font-bold text-primary-600">Market</span>
+            <div className="leading-tight">
+              <div className="text-lg sm:text-xl font-extrabold text-gray-900 tracking-tight">
+                LIDYA <span className="text-primary-600">İKLİM</span>
+              </div>
+              <div className="text-[10px] sm:text-xs text-gray-500 font-medium -mt-0.5">
+                Kombi & Klima Yedek Parça
+              </div>
             </div>
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             {links.map(link => (
               <Link
                 key={link.to}
@@ -64,7 +70,7 @@ function Navbar() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-50"
+              className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-50"
             >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -74,7 +80,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white">
+        <div className="lg:hidden border-t border-gray-100 bg-white">
           <div className="px-4 py-3 space-y-1">
             {links.map(link => (
               <Link

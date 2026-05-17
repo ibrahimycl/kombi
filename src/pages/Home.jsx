@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Search, ArrowRight, Flame, Wind, Thermometer, Droplets, Filter, Wrench, Truck, ShieldCheck, Headphones } from 'lucide-react'
+import { Search, ArrowRight, Flame, Wind, Thermometer, Droplets, Filter, Wrench, Truck, ShieldCheck, Headphones, CheckCircle2, Award, Zap, Users, Phone } from 'lucide-react'
 import ProductCard from '../components/ProductCard'
 
 const iconMap = {
@@ -36,17 +36,20 @@ function Home() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-primary-200 text-sm font-medium mb-6">
               <ShieldCheck className="w-4 h-4" />
-              Türkiye'nin Güvenilir Yedek Parça Marketi
+              Lidya İklimlendirme – Esenyurt / İstanbul
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
               Kombi & Klima <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-300 to-accent-500">
                 Yedek Parça
               </span>
+              <br/>
+              <span className="text-2xl sm:text-3xl md:text-4xl text-primary-200 font-bold">Teknik Servis & İklimlendirme Çözümleri</span>
             </h1>
             <p className="text-lg text-primary-200 mb-8 max-w-xl">
-              Orijinal ve muadil yedek parçalar, uygun fiyatlar ve hızlı teslimat.
-              Aradığınız parçayı hemen bulun.
+              Kombi ve klima yedek parça satışında kaliteli ürün, uygun fiyat ve
+              hızlı hizmet anlayışıyla yanınızdayız. Orijinal ve uyumlu yedek parça
+              seçenekleri, uzman destek ekibi ve hızlı tedarik.
             </p>
 
             {/* Search */}
@@ -77,9 +80,9 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: Truck, title: 'Hızlı Kargo', desc: 'Aynı gün kargo imkanı' },
-              { icon: ShieldCheck, title: 'Orijinal Parça', desc: 'Garantili orijinal ürünler' },
-              { icon: Headphones, title: 'Teknik Destek', desc: '7/24 teknik destek hattı' },
+              { icon: Truck, title: 'Hızlı Tedarik', desc: 'Siparişlerinizi en kısa sürede ulaştırıyoruz' },
+              { icon: ShieldCheck, title: 'Kaliteli Ürün', desc: 'Orijinal ve uyumlu yedek parçalar' },
+              { icon: Headphones, title: 'Teknik Destek', desc: 'Uzman ekibimizden profesyonel destek' },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-4 p-4">
                 <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -91,6 +94,56 @@ function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Intro */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary-50 rounded-full text-primary-700 text-xs font-medium mb-4">
+              <Award className="w-3.5 h-3.5" />
+              Güvenilir İş Ortağınız
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Lidya İklimlendirme
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Lidya İklimlendirme olarak kombi ve klima yedek parça satışında kaliteli ürün,
+              uygun fiyat ve hızlı hizmet anlayışıyla müşterilerimize hizmet vermekteyiz.
+              Kombi, klima ve iklimlendirme sistemlerine ait yedek parçalar, teknik servis
+              ekipmanları ve profesyonel çözümler ile sektörde güvenilir hizmet sunuyoruz.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Orijinal ve uyumlu yedek parça seçenekleri, uzman destek ekibi ve hızlı tedarik
+              avantajıyla ihtiyacınız olan tüm ürünlere kolayca ulaşabilirsiniz.
+            </p>
+            <Link
+              to="/hakkimizda"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-xl transition-colors"
+            >
+              Hakkımızda <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-3xl p-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Neden Lidya İklimlendirme?</h3>
+            <ul className="space-y-3">
+              {[
+                'Kaliteli ve güvenilir ürünler',
+                'Uygun fiyat garantisi',
+                'Hızlı tedarik ve gönderim',
+                'Teknik destek hizmeti',
+                'Geniş ürün yelpazesi',
+                'Müşteri memnuniyeti odaklı çalışma',
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -158,13 +211,22 @@ function Home() {
               Kombi veya klimanız arızalandı mı? Hemen servis talebi oluşturun, en kısa sürede size ulaşalım.
             </p>
           </div>
-          <Link
-            to="/servis"
-            className="flex items-center gap-2 px-8 py-3.5 bg-white text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-colors shadow-lg flex-shrink-0"
-          >
-            <Wrench className="w-5 h-5" />
-            Servis Talebi Oluştur
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0 w-full md:w-auto">
+            <Link
+              to="/servis"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-colors shadow-lg"
+            >
+              <Wrench className="w-5 h-5" />
+              Servis Talebi Oluştur
+            </Link>
+            <a
+              href="tel:+905453347203"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 bg-primary-900/30 hover:bg-primary-900/50 text-white font-semibold rounded-xl transition-colors border border-white/20"
+            >
+              <Phone className="w-5 h-5" />
+              0545 334 72 03
+            </a>
+          </div>
         </div>
       </section>
     </div>

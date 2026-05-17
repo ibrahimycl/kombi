@@ -90,9 +90,9 @@ function ServiceRequest() {
 
           <div className="space-y-4">
             {[
-              { icon: Phone, title: 'Telefon', value: '0545 186 7203' },
-              { icon: Clock, title: 'Çalışma Saatleri', value: 'Pazartesi - Pazar, 08:00 - 22:00' },
-              { icon: MapPin, title: 'Hizmet Bölgesi', value: 'İstanbul ve çevresi' },
+              { icon: Phone, title: 'Telefon', value: '0545 334 72 03 / 0542 183 56 39' },
+              { icon: Clock, title: 'Çalışma Saatleri', value: 'Pzt - Cmt: 08:30 - 19:00 | Pazar: Kapalı' },
+              { icon: MapPin, title: 'Adres', value: 'Sultaniye Mah. 128 Sokak No:11/A Esenyurt / İstanbul' },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
                 <item.icon className="w-5 h-5 text-primary-600 mt-0.5" />
